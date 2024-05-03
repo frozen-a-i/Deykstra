@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/5548f5ed00.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="front.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light "
+        style="font-size: 25px; font-family: sans-serif; background-color: whitesmoke; visibility: hidden;">
+
+        <img src="https://codingblocks.com/assets/images/cb/cblogo.png" width="124" height="45"
+            class="d-inline-block align-top" alt="">
+        Least time travel path project
+
+    </nav>
+    <div id="container">
+        <div id="mynetwork">
+        </div>
+        <div id="container2" style="text-align: left; font-size: x-large;">
+            <span id="temptext" style="width: 100%; text-align: left; font-size: x-large">
+                <label for="manzil">Yangi manzil: </label>
+                <input type="text" id="manzil" name="manzil"
+                    style="border-radius: 5px; border-color:rgb(106, 104, 104);" placeholder="manzil"><br>
+            </span>
+            <span id="temptext" style="width: 100%; text-align: left; font-size: x-large">
+                <label for="neighbours">Qo'shni graflar</label>
+
+                <select name="neighbours" id="neighbours">
+                    <option value="0">Urganch</option>
+
+                </select>
+
+            </span>
+
+            <span id="temptext" class="box"></span>
+            <span id="temptext1" class="box" name="spanroad"
+                style="width: 100%; text-align: left; font-size: x-large;  border: 1px dotted rgb(106, 104, 104);border-radius: 5px;">
+
+                <label for="roughness">Yo'lning notekisligi</label>
+                <select name="roughness" id="roughness" style="width: 100%;">
+                    <option disabled selected>...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select><br>
+                <label for="lengt">Masofa (km)</label><input type="text" id="lengt" name="lengt"
+                    style="width: 100%;" /><br>
+                <label for="capacity">Sig'imi</label>
+                <select name="capacity" id="capacity" style="width: 100%;">
+                    <option disabled selected>...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select><br>
+                <label for="speed">Tezlik (km/soat)</label><input type="text" id="speed" style="width: 100%;"
+                    name="speed" /> <br>
+                <input type="button" name="btn btn-success" value="save" id="btnsave" />
+
+            </span>
+            <span id="temptext" style="width: 100%; text-align: center; font-size: x-large">
+
+
+                <label for="initiall"> Boshlang'ich nuqta</label>
+                <select name="initiall" id="initiall">
+                    <option disabled selected>...</option>
+                </select>
+
+                <label for="last"> Oxirgi nuqta </label>
+                <select name="last" id="last">
+                    <option disabled selected>...</option>
+                </select>
+
+
+            </span>
+            <span id="temptext2" style="width: 100%; text-align: center; font-size: x-large">
+            </span>
+
+            <div id="mynetwork2" style="display: none"></div>
+        </div>
+    </div>
+
+    <div>
+        <br>
+        <button type="button" class="btn btn-danger" id="generate-graph">Start</button>
+        <br>
+        <button type="button" class="btn btn-success" id="solve">Solve</button>
+    </div>
+</body>
+
+</html>

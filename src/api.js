@@ -70,7 +70,6 @@ router.post("/connections", async (req, res) => {
         const toId = (await getPointId(neighbours)).id;
         const fromId = (await getPointId(fromPoint)).id;
 
-
         console.log(fromId, toId, weight);
         const result = await createConnection(fromId, toId, weight)
         res.status(201).json(result);
